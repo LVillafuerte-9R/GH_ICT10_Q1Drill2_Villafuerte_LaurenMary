@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drill 2: Working on Strings</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #48a3a3;
+        padding: 20px;
+        background-image: url('https://i.pinimg.com/originals/00/98/1b/00981b889a98f2f2e4fc9f21712cc2a0.gif'); /* your image name here */
+        background-size: cover;       /* make it cover whole screen */
+        background-repeat: no-repeat; /* don’t tile the image */
+        background-position: center;  /* center the image */
+      }
+      
+      /* Curvy square container */
+      .cute-container {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #224380; /* container bg color (change this) */
+        padding: 20px;
+        border: 5px solid #0c203a; /* border color (change this) */
+        border-radius: 20px;       /* how curvy the corners are */
+        box-shadow: 6px 6px 0 #812c4d; /* pixel-like shadow (change color here) */
+      }
+
+      .cute-container h1 {
+        text-align: center;
+        margin-top: 0;
+      }
+
+      input, button {
+        margin-top: 10px;
+        padding: 8px;
+        display: block;
+        width: 100%;
+        border-radius: 8px; /* slightly curved inputs/buttons */
+        border: 1px solid #60a4be;
+      }
+
+      button {
+        background-color: #3d5b81; /* button color */
+        color: #48a3a3;
+        cursor: pointer;
+        border: none;
+      }
+
+      button:hover {
+        background-color: #8b3f63;
+      }
+
+      /* Output area inside container */
+      #output {
+        margin-top: 20px;
+        white-space: pre-wrap;
+        background: #813c5c; /* output bg color */
+        padding: 15px;
+        border-radius: 15px; /* curved output box */
+        border: 2px dashed #2f4e91; /* border color and style */
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="cute-container">
+      <h1>₊˚.🎧*ੈ✩‧𝑴𝒚 𝑩𝒂𝒔𝒊𝒄 𝑰𝒏𝒇𝒐‧*ੈ✩‧₊˚🎧˚.</h1>
+
+      <label for="name">ℕ𝕒𝕞𝕖˙✧˖°📷 ༘ ⋆｡˚:</label>
+      <input id="name" type="text" />
+
+      <label for="age">𝔸𝕘𝕖🎧ྀི♪⋆.✮:</label>
+      <input id="age" type="number" />
+
+      <label for="school">𝕊𝕔𝕙𝕠𝕠𝕝⋆.˚☁️⋆:</label>
+      <input id="school" type="text" />
+
+      <button py-click="show_message">𝓖𝓮𝓷𝓮𝓻𝓪𝓽𝓮 𝓜𝓮𝓼𝓼𝓪𝓰𝓮</button>
+      <button onclick="resetFields()">𝑹𝒆𝒔𝒆𝒕</button>
+
+      <script>
+       function resetFields() {
+        document.getElementById('name').value = '';
+        document.getElementById('age').value = '';
+       document.getElementById('school').value = '';
+       document.getElementById('output').innerHTML = '';
+       }
+     </script>
+
+
+      <div id="output"></div>
+    </div>
+
+    <py-config>
+      [[fetch]]
+      files = ["main.py"]
+    </py-config>
+
+    <py-script src="main.py"></py-script>
+
+  </body>
+</html>
